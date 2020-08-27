@@ -1,4 +1,5 @@
-# afrikaklub-admin-app-v1
+# Vuetitron Starter pack
+### Vue JS, Electron Builder and Vuetify Framework starter pack
 
 ## Project setup
 ```
