@@ -1,0 +1,22 @@
+// app scss core
+
+// --- colors ---
+
+
+// --- scrollbar ---
+::-webkit-scrollbar-track {
+    border: none;
+    background-color: #dadada;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #aeaeae;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aeaeae;
+}
+
+// imports core scss file
+@import "./core/colors";
