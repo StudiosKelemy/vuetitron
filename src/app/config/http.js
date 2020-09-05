@@ -1,5 +1,6 @@
 // HTTP JS
 import axios from 'axios'
+import axiosRetry from 'axios-retry'
 
 // create a new axios instance
 const http = axios.create({
@@ -13,7 +14,7 @@ http.interceptors.request.use((config) => {
 }, (error) => {
     // Do something with request error
     return Promise.reject(error)
-});
+})
 
 // before a response add a response interceptor
 http.interceptors.response.use((response) => {
@@ -25,5 +26,7 @@ http.interceptors.response.use((response) => {
     // Do something with response error
     return Promise.reject(error)
 })
+
+axiosRetry(http, { retries: 3 })
 
 export default http

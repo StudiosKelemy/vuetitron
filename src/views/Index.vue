@@ -12,11 +12,13 @@
                         </v-col>
 
                         <!-- Connexion form -->
-                        <v-col cols="12" sm="3" class="white">
+                        <v-col cols="12" sm="6" md="6" lg="4" xl="3" class="white">
                             <v-form class="orange--text text--darken-3">
                                 <v-text-field label="Administrateur" type="email" required outlined flat clearable class="mb-0"></v-text-field>
                                 <v-text-field label="Mot de passe" type="password" required outlined flat clearable class="mb-0"></v-text-field>
-                                <v-btn depressed color="primary" block large>Connexion</v-btn>
+
+                                <v-btn depressed color="primary" block large @click.prevent="login">Connexion</v-btn>
+
                             </v-form>
                         </v-col>
 
@@ -30,6 +32,18 @@
 <script>
 export default {
     name: 'Index',
-    components: {}
+    components: {},
+    data () {
+        return {
+            //
+        }
+    },
+    methods: {
+
+        // login
+        login () {
+            this.$router.push('/dashboard')
+        }
+    }
 }
 </script>

@@ -1,5 +1,13 @@
 // app scss core
 
+// components
+
+// helpers
+.thumbnail {
+    cursor: pointer;
+    border: 2px white solid;
+}
+
 // --- colors ---
 
 
@@ -20,3 +28,5 @@
 
 // imports core scss file
 @import "./core/colors";
+@import "./core/toasted";
+@import "./core/main";
